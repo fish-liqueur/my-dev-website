@@ -1,0 +1,11 @@
+.slide-enter-active {
+    transform: translateX(-100%);
+    transition: all .2s linear;
+}
+.slide-enter-to, .slide-leave {
+    transform: translateX(0);
+}
+
+.slide-enter, .slide-leave-to {
+    transform: translateX(-100%);
+}

@@ -2,7 +2,7 @@
     <nav ref="menuRef" class="absolute top-full right-0">
         <ul class="text-sm font-bold uppercase bg-neutral-100 divide-y divide-black">
             <li v-for="(item) in menuItems" :key="item.to">
-                <NuxtLink :to="item.to" class="inline-flex justify-end w-full h-full p-2 pl-4">
+                <NuxtLink :to="item.to" class="inline-flex justify-end w-full h-full p-2 pl-4 sm:text-2xl">
                     {{ item.name }}
                 </NuxtLink>
             </li>
