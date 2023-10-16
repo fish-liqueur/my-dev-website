@@ -1,3 +1,8 @@
+## My dev portfolio website (under construction)
+I use Vue3, Nuxt3, TS and TailwindCSS
+
+The following is the standard Nuxt README
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
