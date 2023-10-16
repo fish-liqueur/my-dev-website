@@ -1,11 +1,13 @@
 <template>
-    <footer class="flex justify-between	items-center bg-black text-neutral-200 leading-none p-4">
-        <div class="flex items-center gap-2">
-            <a v-for="link in socialLinks" :key="link.to" :href="link.to" target="_blank" class="footer-link">
-                <NuxtIcon :name="link.icon" class="inline-block w-7 h-7" />
-            </a>
+    <footer class="bg-black text-neutral-200 leading-none p-4">
+        <div class="flex items-center justify-between gap-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-2">
+                <a v-for="link in socialLinks" :key="link.to" :href="link.to" target="_blank" class="footer-link">
+                    <NuxtIcon :name="link.icon" class="inline-block w-7 h-7" />
+                </a>
+            </div>
+            <span>© 2023 Ivan Novak</span>
         </div>
-        <span>© 2023 Ivan Novak</span>
     </footer>
 </template>
 
