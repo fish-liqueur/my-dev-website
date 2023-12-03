@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from "vue";
-// import FancyLink from "~/components/FancyLink.vue";
 
 const menuLinks = ref([
     {
-        link: '#',
+        link: '/docs/Ivan_Novak_-_Frontend_Developer_-_CV.pdf',
         external: true,
         title: 'Download my CV',
         subtitle: 'in PDF',
@@ -37,7 +36,8 @@ const scrollArea = ref(null);
 
 const translateBase = ref(0);
 let observer: IntersectionObserver;
-const handleIntersect = ([entry]) => {
+const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+    const [entry] = entries;
     translateBase.value = entry.intersectionRatio;
 };
 
@@ -59,7 +59,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="lg:pb-16">
+    <div class="lg:pb-16" ref="scrollArea">
         <h2 class="text-4xl sm:text-7xl font-extrabold sm:mb-4">links</h2>
         <div class="flex flex-col lg:flex-row-reverse lg:gap-16">
             <div class="flex flex-col self-end w-3/4 lg:w-1/2 divide-y">
@@ -72,13 +72,13 @@ onUnmounted(() => {
                     class="border-black"
                 />
             </div>
-            <div ref="scrollArea" class="flex align-middle h-52">
+            <div class="flex align-middle h-52 lg:h-64 max-w-full">
                 <NuxtPicture
                     format="avif,webp"
-                    src="/images/intro-portrait.jpg"
+                    src="/images/cat-walk.png"
                     :style="movingImageStyle"
-                    class="flex justify-center m-auto h-3/4 transition-transform duration-200"
-                    :imgAttrs="{style:'object-fit:cover; max-height: 100%;'}"
+                    class="flex justify-center m-auto h-3/4 transition-transform duration-1000 delay-150"
+                    :imgAttrs="{style:'max-height: 100%; max-width: 100%;'}"
                 />
             </div>
         </div>
